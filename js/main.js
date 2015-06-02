@@ -1,3 +1,6 @@
+var React = require('react');
+var ReactBootstrap = require('react-bootstrap');
+
 var Button = ReactBootstrap.Button;
 var Navbar = ReactBootstrap.Navbar;
 var Nav = ReactBootstrap.Nav;
@@ -15,7 +18,10 @@ var icon = (
 
 var App = React.createClass({
   render: function() {
-    var message = "Interior Design App";
+    if (__DEV__) {
+      console.log('render function in App');
+    }
+    var message = "UpperView Homes";
     return (<div>
               <Navbar brand={icon} defaultNavExpanded={false} toggleNavKey={0}>
                 <Nav right eventKey={0}>

@@ -1,15 +1,36 @@
 {
-  "name": "bootleg",
+  "name": "learn-react",
   "version": "0.0.0",
   "description": "react with react-bootstrap",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "lionkeng/learn-react"
+  },
+  "main": "main.js",
   "scripts": {
+    "build": "BUILD_DEV=1 webpack --config webpack.build.config.js",
+    "dev": "BUILD_DEV=1 webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
+    "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel": "^5.4.7",
+    "css-loader": "^0.14.4",
+    "file-loader": "^0.8.4",
+    "jsx-loader": "^0.13.2",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "node-libs-browser": "^0.5.2",
     "react": "^0.13.3",
-    "react-bootstrap": "^0.23.0"
+    "react-bootstrap": "^0.23.0",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.9.0"
   }
 }

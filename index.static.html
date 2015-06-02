@@ -4,10 +4,16 @@
     <meta http-equiv='Content-type' content='text/html; charset=utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interior Design App</title>
+    <!--
+    <link rel="stylesheet" href="../shared/css/base.css" />
+    -->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    
+
   </head>
+
   <body>
     <div id="container">
       <p>
@@ -16,7 +22,15 @@
       </p>    
     </div>
 
-    <script src="http://localhost:8080/webpack-dev-server.js"></script>
-    <script src="./build/bundle.js"></script>
+    <!-- FIXME: webpackify? -->
+    <script src="./shared/thirdparty/es5-shim.min.js"></script>
+    <script src="./shared/thirdparty/es5-sham.min.js"></script>
+    <script src="./shared/thirdparty/console-polyfill.js"></script>
+    <script src="./build/react.js"></script>
+    <script src="./build/JSXTransformer.js"></script>
+    <script type="text/jsx" src="./js/main.js"></script>
+
+    <script src="node_modules/react-bootstrap/dist/react-bootstrap.min.js"></script>
+
   </body>
 </html>
