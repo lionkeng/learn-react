@@ -8,20 +8,25 @@ var NavItem = ReactBootstrap.NavItem;
 var DropdownButton = ReactBootstrap.DropdownButton;
 var MenuItem = ReactBootstrap.MenuItem;
 
-var icon = (
+var icon = (__DEV__) ? (
     <span class="logo">
         <a href="/">
-          <img src="assets/images/clientlogo.jpg" />
         </a>
     </span>
-);
+    ) : (
+    <span class="logo">
+        <a href="/">
+         <img src="assets/images/clientlogo.jpg" />
+        </a>
+    </span>
+    );
 
 var App = React.createClass({
   render: function() {
     if (__DEV__) {
       console.log('render function in App');
     }
-    var message = "UpperView Homes";
+    var message = "UpperView Design App Upper View";
     return (<div>
               <Navbar brand={icon} defaultNavExpanded={false} toggleNavKey={0}>
                 <Nav right eventKey={0}>
