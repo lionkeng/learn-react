@@ -4,3 +4,5 @@ build.js
 bundle.js
 vendors.js
 assets
+npm-debug.log
+bower_components
