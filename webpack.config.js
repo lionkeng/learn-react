@@ -22,7 +22,7 @@ child_process.exec('cp index.dev.html index.html', function(error, stdout, stder
     }
 });
 
- module.exports = {
+ var config = {
   entry: {
     entry: ['webpack/hot/dev-server', path.resolve(__dirname, 'js/main.js')]
 
@@ -48,5 +48,8 @@ child_process.exec('cp index.dev.html index.html', function(error, stdout, stder
     // you can now require('file') instead of require('file.coffee')
     extensions: ['', '.js', '.json', '.jsx'] 
   },
-
 };
+
+module.exports = config;
+
+
